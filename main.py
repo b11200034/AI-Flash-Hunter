@@ -18,6 +18,48 @@ logging.basicConfig(
 )
 
 # ==============================================================================
+#                      0. 一次性 Webhook 連線對接測試
+# ==============================================================================
+
+def check_and_send_test_notification():
+    """發送一次性的 Discord Webhook 對接成功測試通知"""
+    test_file = "test_sent.txt"
+    if os.path.exists(test_file):
+        return
+
+    url = config.DISCORD_WEBHOOK_URL
+    if not url or url == "YOUR_DISCORD_WEBHOOK_URL_HERE":
+        logging.warning("未配置 Discord Webhook，跳過一次性對接測試。")
+        return
+
+    embed = {
+        "title": "🔔 AI 短線數據獵手 - 系統對接成功！",
+        "description": "恭喜！您的 Discord Webhook 管道已順利打通，連線測試成功！🎉",
+        "color": 3447003,  # #3498DB (藍色)
+        "fields": [
+            {"name": "系統狀態 (Status)", "value": "🟢 雲端實時監控中 (Online)", "inline": True},
+            {"name": "初始資金池 (Cash)", "value": f"`${config.INITIAL_CASH:,.2f} USD`", "inline": True},
+            {"name": "監控標的 (Symbols)", "value": f"`{', '.join(config.SYMBOLS)}`", "inline": False},
+            {"name": "提示", "value": "此通知為**一次性測試通知**。未來系統將嚴格遵循防干擾原則，**只有在觸發真實模擬買入/賣出時**才會發送通知。", "inline": False}
+        ],
+        "footer": {
+            "text": f"AI Short-Term Data Hunter Lab | 測試時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        }
+    }
+    payload = {"embeds": [embed]}
+    try:
+        response = requests.post(url, json=payload, timeout=10)
+        if response.status_code == 204:
+            logging.info("【系統測試】成功發送對接測試通知至 Discord！")
+            with open(test_file, "w", encoding="utf-8") as f:
+                f.write(f"Test sent at {datetime.now()}")
+        else:
+            logging.error(f"【系統測試】發送測試通知失敗，狀態碼: {response.status_code}")
+    except Exception as e:
+        logging.error(f"【系統測試】發送測試通知時發生異常: {str(e)}")
+
+
+# ==============================================================================
 #                      1. 數據儲存與載入 (JSON & CSV 持久化)
 # ==============================================================================
 
@@ -195,6 +237,9 @@ def run_trading_bot():
     logging.info("==================================================")
     logging.info("🚀 AI 短線數據獵手實驗室 - 開始掃描高頻訊號...")
     logging.info("==================================================")
+
+    # 執行一次性 Webhook 連線測試
+    check_and_send_test_notification()
 
     # 載入當前狀態
     state = load_state()

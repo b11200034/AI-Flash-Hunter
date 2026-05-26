@@ -40,8 +40,8 @@ jobs:
 
       - name: 5. 交易狀態自動提交與同步 (Git Auto-Commit & Sync)
         run: |
-          # 檢查是否有狀態變更 (CSV 記帳或 JSON 狀態更新)
-          git add portfolio_flash.csv portfolio_state.json
+          # 檢查是否有狀態變更 (CSV 記帳、JSON 狀態更新或一次性測試標記)
+          git add portfolio_flash.csv portfolio_state.json test_sent.txt
           
           if ! git diff --cached --quiet; then
             echo "偵測到交易狀態變更，準備推送至 GitHub 倉庫..."
