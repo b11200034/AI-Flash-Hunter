@@ -1,0 +1,63 @@
+name: AI Short-Term Data Hunter Lab Runner
+
+on:
+  schedule:
+    # 每 5 分鐘觸發一次 (GitHub Actions 的最小排程頻率)
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+    # 支援手動觸發，方便測試與即時手動調度
+
+permissions:
+  contents: write  # 授予 Actions 寫入權限，以便能將自動記帳的 CSV & JSON 狀態推回 GitHub
+
+jobs:
+  run-hunter-bot:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 1. 檢出程式碼庫 (Checkout Repository)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true  # 保持驗證狀態以便後續 git push
+
+      - name: 2. 設定 Python 環境 (Set up Python)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: 3. 安裝依賴套件 (Install dependencies)
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: 4. 執行數據獵手主程式 (Execute Trading Bot)
+        env:
+          # 從 Repository Secrets 讀取 Discord Webhook URL，確保敏感資訊安全不外洩
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          python main.py
+
+      - name: 5. 交易狀態自動提交與同步 (Git Auto-Commit & Sync)
+        run: |
+          # 檢查是否有狀態變更 (CSV 記帳或 JSON 狀態更新)
+          git add portfolio_flash.csv portfolio_state.json
+          
+          if ! git diff --cached --quiet; then
+            echo "偵測到交易狀態變更，準備推送至 GitHub 倉庫..."
+            
+            # 設定 Git 使用者資訊
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            
+            # 提交變更，[skip ci] 防止 Actions 進入遞迴自我觸發
+            git commit -m "📊 交易更新: 帳戶與持倉狀態自動同步 [skip ci]"
+            
+            # 使用 rebase 機制拉取遠端最新變更，防止多個排程間的衝突，確保推送成功
+            git pull --rebase origin main
+            git push origin main
+            
+            echo "狀態同步成功！"
+          else
+            echo "沒有任何交易狀態變更，無需推送。"
+          fi
