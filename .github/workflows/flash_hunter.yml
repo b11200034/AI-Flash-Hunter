@@ -53,6 +53,10 @@ jobs:
             # 提交變更，[skip ci] 防止 Actions 進入遞迴自我觸發
             git commit -m "📊 交易更新: 帳戶與持倉狀態自動同步 [skip ci]"
             
+            # 清除所有未被暫存的臨時日誌與檔案，確保工作區完全乾淨以順利 Rebase
+            git reset --hard
+            git clean -fd
+            
             # 使用 rebase 機制拉取遠端最新變更，防止多個排程間的衝突，確保推送成功
             git pull --rebase origin main
             git push origin main
