@@ -29,6 +29,9 @@ DISCORD_WEBHOOK_URL = os.getenv(
     "YOUR_DISCORD_WEBHOOK_URL_HERE"  # 請在此處填入您的 Discord Webhook 網址 (本地測試時)
 )
 
-# 6. 本地數據持久化檔案路徑
+# 6. 每日定時心跳回報設定
+DAILY_REPORT_HOUR = 18         # 每日定時發送健康回報的台灣時間小時數 (18 代表下午 6 點)
+
+# 7. 本地數據持久化檔案路徑
 PORTFOLIO_CSV = "portfolio_flash.csv"
 STATE_JSON = "portfolio_state.json"

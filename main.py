@@ -59,6 +59,59 @@ def check_and_send_test_notification():
         logging.error(f"【系統測試】發送測試通知時發生異常: {str(e)}")
 
 
+def send_daily_report(state, tw_time):
+    """發送每日定時心跳與資產健康回報"""
+    url = config.DISCORD_WEBHOOK_URL
+    if not url or url == "YOUR_DISCORD_WEBHOOK_URL_HERE":
+        return
+
+    cash = state["cash"]
+    total_value = state["total_value"]
+    positions = state["positions"]
+    
+    # 計算自開始以來的累計報酬率
+    cum_pnl = total_value - config.INITIAL_CASH
+    cum_pnl_pct = (cum_pnl / config.INITIAL_CASH) * 100
+    pnl_sign = "+" if cum_pnl >= 0 else ""
+
+    # 整理當前持倉清單
+    pos_details = []
+    if not positions:
+        pos_str = "📭 目前無持有部位 (All Clear)"
+    else:
+        for sym, pos in positions.items():
+            pos_details.append(f"• `{sym}`: 入場價 `${pos['buy_price']:,.4f}` | 數量 `{pos['quantity']:,.4f}` | 已持有 `{pos['bars_held']}` 根 K線")
+        pos_str = "\n".join(pos_details)
+
+    embed = {
+        "title": "🔔 AI 短線數據獵手 - 每日運作健康回報",
+        "description": "系統在雲端持續穩定運作中，今日心跳與資產結算報告已生成！",
+        "color": 1149618,  # #118AB2 (深藍綠色)
+        "fields": [
+            {"name": "系統狀態 (Status)", "value": "🟢 正常實時檢測中 (Active)", "inline": True},
+            {"name": "台灣時間 (Time)", "value": f"`{tw_time.strftime('%Y-%m-%d %H:%M:%S')}`", "inline": True},
+            {"name": "可用現金 (Available Cash)", "value": f"`${cash:,.2f} USD`", "inline": True},
+            {"name": "帳戶總淨值 (Total Net Value)", "value": f"**${total_value:,.2f} USD**", "inline": True},
+            {"name": "累計總收益 (Total PnL)", "value": f"**{pnl_sign}${cum_pnl:,.2f} USD ({pnl_sign}{cum_pnl_pct:.2f}%)**", "inline": True},
+            {"name": "監控商品 (Symbols)", "value": f"`{', '.join(config.SYMBOLS)}`", "inline": False},
+            {"name": "當前模擬持倉狀況", "value": pos_str, "inline": False}
+        ],
+        "footer": {
+            "text": "AI Short-Term Data Hunter Lab | 每日自動對接健康回報"
+        }
+    }
+    
+    payload = {"embeds": [embed]}
+    try:
+        response = requests.post(url, json=payload, timeout=10)
+        if response.status_code == 204:
+            logging.info("【每日心跳】成功發送每日健康心跳通知至 Discord！")
+        else:
+            logging.error(f"【每日心跳】發送每日心跳通知失敗，狀態碼: {response.status_code}")
+    except Exception as e:
+        logging.error(f"【每日心跳】發送每日心跳通知時發生異常: {str(e)}")
+
+
 # ==============================================================================
 #                      1. 數據儲存與載入 (JSON & CSV 持久化)
 # ==============================================================================
@@ -70,7 +123,8 @@ def init_portfolio_files():
         state = {
             "cash": config.INITIAL_CASH,
             "total_value": config.INITIAL_CASH,
-            "positions": {}
+            "positions": {},
+            "last_daily_report_date": ""
         }
         with open(config.STATE_JSON, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=4, ensure_ascii=False)
@@ -91,7 +145,11 @@ def load_state():
     """載入當前模擬帳戶狀態"""
     init_portfolio_files()
     with open(config.STATE_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
+        state = json.load(f)
+    # 確保有每日回報日期的欄位 (相容舊檔)
+    if "last_daily_report_date" not in state:
+        state["last_daily_report_date"] = ""
+    return state
 
 
 def save_state(state):
@@ -240,6 +298,10 @@ def run_trading_bot():
 
     # 執行一次性 Webhook 連線測試
     check_and_send_test_notification()
+
+    from datetime import timezone, timedelta
+    # 獲取台灣時間 (UTC+8)，以進行精準的每日定時回報
+    tw_time = datetime.now(timezone.utc) + timedelta(hours=8)
 
     # 載入當前狀態
     state = load_state()
@@ -485,6 +547,17 @@ def run_trading_bot():
             total_positions_value += pos["quantity"] * pos["buy_price"]
 
     current_total_value = cash + total_positions_value
+
+    # ------------------------------------------------------------------
+    # D. 每日定時發送健康回報
+    # ------------------------------------------------------------------
+    tw_date_str = tw_time.strftime("%Y-%m-%d")
+    last_report_date = state.get("last_daily_report_date", "")
+    
+    if tw_time.hour >= config.DAILY_REPORT_HOUR and tw_date_str != last_report_date:
+        logging.info(f"偵測到台灣時間下午 {config.DAILY_REPORT_HOUR} 點已過，且今日尚未發送健康日報。準備發送...")
+        send_daily_report(state, tw_time)
+        state["last_daily_report_date"] = tw_date_str
 
     # 更新並儲存 JSON 狀態
     state["cash"] = cash
