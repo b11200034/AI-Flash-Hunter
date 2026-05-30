@@ -5,17 +5,23 @@ import os
 # ==============================================================================
 
 # 1. 監控商品清單 (加密貨幣 24/7, 美股開盤時間交易)
-SYMBOLS = ["BTC-USD", "ETH-USD", "SOL-USD", "NVDA", "TSLA"]
+# 已擴展至 16 個高流動性、高波動性商品 (8個加密貨幣 + 8個美股熱門科技股)
+SYMBOLS = [
+    # --- 加密貨幣 (Crypto 24/7 盯盤) ---
+    "BTC-USD", "ETH-USD", "SOL-USD", "DOGE-USD", "XRP-USD", "AVAX-USD", "LINK-USD", "ADA-USD",
+    # --- 熱門美股科技與 AI 概念股 (美股時間盯盤) ---
+    "NVDA", "TSLA", "AMD", "COIN", "PLTR", "META", "MSFT", "AMZN"
+]
 
 # 2. 資金與交易規模
 INITIAL_CASH = 10000.0        # 初始虛擬本金 (USD)
 TRADE_AMOUNT_USD = 1000.0     # 每筆交易固定投入金額 (USD)
 FEE_RATE = 0.001              # 單邊手續費率 (0.1%)
 
-# 3. 數據獵手策略參數 (5分鐘 K 線爆量突破)
+# 3. 數據獵手策略參數 (5分鐘 K 線爆量突破 - 已還原為嚴格黃金突破版)
 ATR_PERIOD = 14               # ATR 計算期數
-ATR_MULTIPLIER = 3.0          # 震幅突破 ATR 倍數
-VOLUME_MULTIPLIER = 3.0       # 成交量突破均量倍數
+ATR_MULTIPLIER = 3.0          # 震幅突破 ATR 倍數 (還原為嚴格的 3.0 倍)
+VOLUME_MULTIPLIER = 3.0       # 成交量突破均量倍數 (還原為嚴格的 3.0 倍)
 
 # 4. 鋼鐵風控與出場條件
 TAKE_PROFIT_PCT = 0.02        # 淨報酬率停利門檻 (+2%)
