@@ -7,7 +7,7 @@
             "buy_price": 211.07000732421875,
             "quantity": 4.733026793643229,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
         },
         "TSLA": {
@@ -15,7 +15,7 @@
             "buy_price": 402.17999267578125,
             "quantity": 2.4839624501295052,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
         },
         "AMD": {
@@ -23,7 +23,7 @@
             "buy_price": 537.9884033203125,
             "quantity": 1.8569173495831028,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
         },
         "COIN": {
@@ -31,7 +31,7 @@
             "buy_price": 164.43589782714844,
             "quantity": 6.075315750397324,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
         },
         "META": {
@@ -39,7 +39,7 @@
             "buy_price": 578.760009765625,
             "quantity": 1.726104055469478,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
         },
         "MSFT": {
@@ -47,7 +47,7 @@
             "buy_price": 379.1400146484375,
             "quantity": 2.6349104853159213,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
         },
         "AMZN": {
@@ -55,7 +55,7 @@
             "buy_price": 243.89999389648438,
             "quantity": 4.095941061909144,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
         }
     },
