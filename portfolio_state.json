@@ -1,6 +1,6 @@
 {
-    "cash": 2965.3994540324875,
-    "total_value": 9939.49666951159,
+    "cash": 965.3994540324875,
+    "total_value": 9935.010157923314,
     "positions": {
         "NVDA": {
             "buy_time": "2026-06-18 22:00:38",
@@ -57,7 +57,23 @@
             "invested_amount": 1000.0,
             "bars_held": 1,
             "entry_candle_time": "2026-06-18 15:50:00-04:00"
+        },
+        "SOL-USD": {
+            "buy_time": "2026-06-22 11:12:29",
+            "buy_price": 74.0199966430664,
+            "quantity": 13.496352949288848,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-06-22 11:05:00+00:00"
+        },
+        "XRP-USD": {
+            "buy_time": "2026-06-22 11:12:30",
+            "buy_price": 1.142300009727478,
+            "quantity": 874.5513363326806,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-06-22 11:05:00+00:00"
         }
     },
-    "last_daily_report_date": "2026-06-21"
+    "last_daily_report_date": "2026-06-22"
 }
