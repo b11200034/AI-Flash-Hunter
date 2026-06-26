@@ -1,13 +1,13 @@
 {
-    "cash": 6890.601505173956,
-    "total_value": 9879.797062144025,
+    "cash": 7878.405312457468,
+    "total_value": 9878.808269544143,
     "positions": {
         "TSLA": {
             "buy_time": "2026-06-26 20:59:55",
             "buy_price": 380.5299987792969,
             "quantity": 2.6252857940364613,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-26 15:50:00-04:00"
         },
         "COIN": {
@@ -15,15 +15,7 @@
             "buy_price": 148.47999572753906,
             "quantity": 6.7281790729113835,
             "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-06-26 15:50:00-04:00"
-        },
-        "AMZN": {
-            "buy_time": "2026-06-26 20:59:57",
-            "buy_price": 232.92999267578125,
-            "quantity": 4.28884227627364,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-06-26 15:50:00-04:00"
         }
     },
