@@ -1,6 +1,15 @@
 {
-    "cash": 9777.112229372313,
-    "total_value": 9777.112229372313,
-    "positions": {},
+    "cash": 8777.112229372313,
+    "total_value": 9777.464280841928,
+    "positions": {
+        "NVDA": {
+            "buy_time": "2026-06-30 20:21:42",
+            "buy_price": 199.5,
+            "quantity": 5.007518796992481,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-06-30 15:50:00-04:00"
+        }
+    },
     "last_daily_report_date": "2026-06-30"
 }
