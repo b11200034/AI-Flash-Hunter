@@ -1,6 +1,47 @@
 {
-    "cash": 9756.103671248717,
-    "total_value": 9756.103671248717,
-    "positions": {},
+    "cash": 4756.103671248717,
+    "total_value": 9732.121668217504,
+    "positions": {
+        "NVDA": {
+            "buy_time": "2026-07-07 13:39:11",
+            "buy_price": 192.75,
+            "quantity": 5.182879377431907,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-07 09:30:00-04:00"
+        },
+        "TSLA": {
+            "buy_time": "2026-07-07 13:39:12",
+            "buy_price": 417.1300048828125,
+            "quantity": 2.3949368022102764,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-07 09:30:00-04:00"
+        },
+        "COIN": {
+            "buy_time": "2026-07-07 13:39:12",
+            "buy_price": 169.5399932861328,
+            "quantity": 5.892415002718484,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-07 09:30:00-04:00"
+        },
+        "META": {
+            "buy_time": "2026-07-07 13:39:13",
+            "buy_price": 608.9600219726562,
+            "quantity": 1.6405017800082409,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-07 09:30:00-04:00"
+        },
+        "MSFT": {
+            "buy_time": "2026-07-07 13:39:13",
+            "buy_price": 392.739990234375,
+            "quantity": 2.543667629578103,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-07 09:30:00-04:00"
+        }
+    },
     "last_daily_report_date": "2026-07-07"
 }
