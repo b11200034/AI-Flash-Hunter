@@ -1,6 +1,15 @@
 {
-    "cash": 9714.63252668111,
-    "total_value": 9714.63252668111,
-    "positions": {},
+    "cash": 8714.63252668111,
+    "total_value": 9713.653055424435,
+    "positions": {
+        "AMZN": {
+            "buy_time": "2026-07-08 20:09:41",
+            "buy_price": 243.55499267578125,
+            "quantity": 4.1017430561559545,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-08 15:50:00-04:00"
+        }
+    },
     "last_daily_report_date": "2026-07-08"
 }
