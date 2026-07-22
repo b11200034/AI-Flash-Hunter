@@ -1,15 +1,6 @@
 {
-    "cash": 8696.015312693724,
-    "total_value": 9693.856376809279,
-    "positions": {
-        "TSLA": {
-            "buy_time": "2026-07-21 20:50:56",
-            "buy_price": 379.3599853515625,
-            "quantity": 2.633382640697335,
-            "invested_amount": 1000.0,
-            "bars_held": 1,
-            "entry_candle_time": "2026-07-21 15:50:00-04:00"
-        }
-    },
+    "cash": 9688.18921272122,
+    "total_value": 9688.18921272122,
+    "positions": {},
     "last_daily_report_date": "2026-07-22"
 }
