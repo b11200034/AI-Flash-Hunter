@@ -1,6 +1,15 @@
 {
-    "cash": 9688.18921272122,
-    "total_value": 9688.18921272122,
-    "positions": {},
+    "cash": 8688.18921272122,
+    "total_value": 9690.603810718616,
+    "positions": {
+        "PLTR": {
+            "buy_time": "2026-07-23 20:47:15",
+            "buy_price": 122.87999725341797,
+            "quantity": 8.129882994217045,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-23 15:50:00-04:00"
+        }
+    },
     "last_daily_report_date": "2026-07-23"
 }
