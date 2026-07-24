@@ -1,6 +1,6 @@
 {
-    "cash": 8688.18921272122,
-    "total_value": 9690.603810718616,
+    "cash": 7688.1892127212195,
+    "total_value": 9689.603810718614,
     "positions": {
         "PLTR": {
             "buy_time": "2026-07-23 20:47:15",
@@ -9,6 +9,14 @@
             "invested_amount": 1000.0,
             "bars_held": 1,
             "entry_candle_time": "2026-07-23 15:50:00-04:00"
+        },
+        "AVAX-USD": {
+            "buy_time": "2026-07-24 04:32:43",
+            "buy_price": 6.28000020980835,
+            "quantity": 159.07642780643906,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-07-24 04:25:00+00:00"
         }
     },
     "last_daily_report_date": "2026-07-23"
