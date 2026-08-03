@@ -1,15 +1,6 @@
 {
-    "cash": 8687.90106134852,
-    "total_value": 9685.227840905976,
-    "positions": {
-        "MSFT": {
-            "buy_time": "2026-07-31 20:09:35",
-            "buy_price": 465.70001220703125,
-            "quantity": 2.1451577706978573,
-            "invested_amount": 1000.0,
-            "bars_held": 1,
-            "entry_candle_time": "2026-07-31 15:50:00-04:00"
-        }
-    },
+    "cash": 9737.591515108395,
+    "total_value": 9737.591515108395,
+    "positions": {},
     "last_daily_report_date": "2026-08-03"
 }
