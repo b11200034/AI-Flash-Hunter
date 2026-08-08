@@ -1,15 +1,6 @@
 {
-    "cash": 8741.052711954419,
-    "total_value": 9740.18526879255,
-    "positions": {
-        "SOL-USD": {
-            "buy_time": "2026-08-08 11:15:07",
-            "buy_price": 75.37999725341797,
-            "quantity": 13.252852698329093,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-08-08 11:10:00+00:00"
-        }
-    },
+    "cash": 9736.273408108053,
+    "total_value": 9736.273408108053,
+    "positions": {},
     "last_daily_report_date": "2026-08-08"
 }
