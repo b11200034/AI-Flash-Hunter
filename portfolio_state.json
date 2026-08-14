@@ -1,6 +1,15 @@
 {
-    "cash": 9771.796041322112,
-    "total_value": 9771.796041322112,
-    "positions": {},
+    "cash": 8771.796041322112,
+    "total_value": 9774.53896820582,
+    "positions": {
+        "AMD": {
+            "buy_time": "2026-08-14 20:05:27",
+            "buy_price": 512.4500122070312,
+            "quantity": 1.9494584373166162,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-08-14 15:50:00-04:00"
+        }
+    },
     "last_daily_report_date": "2026-08-14"
 }
