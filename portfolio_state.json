@@ -1,6 +1,6 @@
 {
-    "cash": 7771.796041322112,
-    "total_value": 9773.53896820582,
+    "cash": 8804.891981457815,
+    "total_value": 9807.634908341523,
     "positions": {
         "AMD": {
             "buy_time": "2026-08-14 20:05:27",
@@ -9,14 +9,6 @@
             "invested_amount": 1000.0,
             "bars_held": 1,
             "entry_candle_time": "2026-08-14 15:50:00-04:00"
-        },
-        "AVAX-USD": {
-            "buy_time": "2026-08-15 02:19:01",
-            "buy_price": 6.568999767303467,
-            "quantity": 152.0779472351973,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-08-15 02:10:00+00:00"
         }
     },
     "last_daily_report_date": "2026-08-14"
