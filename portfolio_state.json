@@ -1,15 +1,6 @@
 {
-    "cash": 8809.358840990584,
-    "total_value": 9809.571695132308,
-    "positions": {
-        "ETH-USD": {
-            "buy_time": "2026-08-19 15:02:50",
-            "buy_price": 1968.5999755859375,
-            "quantity": 0.5074672418923788,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-08-19 14:55:00+00:00"
-        }
-    },
+    "cash": 9864.904911846677,
+    "total_value": 9864.904911846677,
+    "positions": {},
     "last_daily_report_date": "2026-08-19"
 }
