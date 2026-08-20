@@ -1,6 +1,15 @@
 {
-    "cash": 9864.904911846677,
-    "total_value": 9864.904911846677,
-    "positions": {},
+    "cash": 8864.904911846677,
+    "total_value": 9862.70893668764,
+    "positions": {
+        "META": {
+            "buy_time": "2026-08-20 19:57:16",
+            "buy_price": 547.2999877929688,
+            "quantity": 1.8253243600982851,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-08-20 15:50:00-04:00"
+        }
+    },
     "last_daily_report_date": "2026-08-20"
 }
