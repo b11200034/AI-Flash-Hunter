@@ -1,6 +1,6 @@
 {
     "cash": 7867.337001147815,
-    "total_value": 9865.261121052157,
+    "total_value": 9860.98610853895,
     "positions": {
         "PLTR": {
             "buy_time": "2026-08-21 19:59:20",
@@ -15,7 +15,7 @@
             "buy_price": 77964.4921875,
             "quantity": 0.01281352538790946,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 5,
             "entry_candle_time": "2026-08-23 21:15:00+00:00"
         }
     },
