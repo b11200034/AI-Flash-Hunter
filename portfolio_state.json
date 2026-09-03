@@ -1,63 +1,6 @@
 {
-    "cash": 2836.9898006244803,
-    "total_value": 9839.349696835641,
-    "positions": {
-        "NVDA": {
-            "buy_time": "2026-09-03 13:36:26",
-            "buy_price": 227.02000427246094,
-            "quantity": 4.400493265787439,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-03 09:30:00-04:00"
-        },
-        "TSLA": {
-            "buy_time": "2026-09-03 13:36:26",
-            "buy_price": 370.81988525390625,
-            "quantity": 2.6940302818873074,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-03 09:30:00-04:00"
-        },
-        "COIN": {
-            "buy_time": "2026-09-03 13:36:27",
-            "buy_price": 185.0800018310547,
-            "quantity": 5.397665820815749,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-03 09:30:00-04:00"
-        },
-        "PLTR": {
-            "buy_time": "2026-09-03 13:36:27",
-            "buy_price": 177.41000366210938,
-            "quantity": 5.631024065039028,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-03 09:30:00-04:00"
-        },
-        "META": {
-            "buy_time": "2026-09-03 13:36:28",
-            "buy_price": 616.2650146484375,
-            "quantity": 1.6210558384040386,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-03 09:30:00-04:00"
-        },
-        "MSFT": {
-            "buy_time": "2026-09-03 13:36:28",
-            "buy_price": 508.489990234375,
-            "quantity": 1.9646404436388951,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-03 09:30:00-04:00"
-        },
-        "AMZN": {
-            "buy_time": "2026-09-03 13:36:29",
-            "buy_price": 257.8599853515625,
-            "quantity": 3.8741955198592684,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-03 09:30:00-04:00"
-        }
-    },
+    "cash": 9934.625629719434,
+    "total_value": 9934.625629719434,
+    "positions": {},
     "last_daily_report_date": "2026-09-03"
 }
