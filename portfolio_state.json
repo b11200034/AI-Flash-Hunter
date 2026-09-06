@@ -1,15 +1,6 @@
 {
-    "cash": 8934.625629719434,
-    "total_value": 9950.21960086561,
-    "positions": {
-        "LINK-USD": {
-            "buy_time": "2026-09-06 20:46:07",
-            "buy_price": 12.762999534606934,
-            "quantity": 78.27313613004583,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-06 20:40:00+00:00"
-        }
-    },
+    "cash": 9940.133389065842,
+    "total_value": 9940.133389065842,
+    "positions": {},
     "last_daily_report_date": "2026-09-06"
 }
