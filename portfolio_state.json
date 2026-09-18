@@ -1,15 +1,6 @@
 {
-    "cash": 8907.86132355309,
-    "total_value": 9907.126531769598,
-    "positions": {
-        "BTC-USD": {
-            "buy_time": "2026-09-18 13:50:50",
-            "buy_price": 79927.8828125,
-            "quantity": 0.012498767199220313,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-09-18 13:45:00+00:00"
-        }
-    },
+    "cash": 9917.60858548257,
+    "total_value": 9917.60858548257,
+    "positions": {},
     "last_daily_report_date": "2026-09-18"
 }
