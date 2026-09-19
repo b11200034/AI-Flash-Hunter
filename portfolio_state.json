@@ -1,6 +1,6 @@
 {
-    "cash": 8917.60858548257,
-    "total_value": 9929.331897453527,
+    "cash": 7917.608585482571,
+    "total_value": 9926.17209353308,
     "positions": {
         "AMD": {
             "buy_time": "2026-09-18 21:55:00",
@@ -9,6 +9,14 @@
             "invested_amount": 1000.0,
             "bars_held": 1,
             "entry_candle_time": "2026-09-18 15:50:00-04:00"
+        },
+        "BTC-USD": {
+            "buy_time": "2026-09-19 15:49:22",
+            "buy_price": 81888.0,
+            "quantity": 0.012199589683470105,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-09-19 15:40:00+00:00"
         }
     },
     "last_daily_report_date": "2026-09-19"
