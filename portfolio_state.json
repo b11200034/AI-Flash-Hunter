@@ -1,15 +1,6 @@
 {
-    "cash": 8870.696328496788,
-    "total_value": 9849.37533956894,
-    "positions": {
-        "COIN": {
-            "buy_time": "2026-10-12 02:41:04",
-            "buy_price": 183.125,
-            "quantity": 5.455290102389078,
-            "invested_amount": 1000.0,
-            "bars_held": 0,
-            "entry_candle_time": "2026-10-09 15:50:00-04:00"
-        }
-    },
+    "cash": 9848.396660557868,
+    "total_value": 9848.396660557868,
+    "positions": {},
     "last_daily_report_date": "2026-10-10"
 }
