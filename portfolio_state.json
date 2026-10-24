@@ -1,6 +1,15 @@
 {
-    "cash": 9812.009852514915,
-    "total_value": 9812.009852514915,
-    "positions": {},
+    "cash": 8812.009852514915,
+    "total_value": 9808.346721670972,
+    "positions": {
+        "AVAX-USD": {
+            "buy_time": "2026-10-24 23:39:36",
+            "buy_price": 9.003000259399414,
+            "quantity": 110.96300913209602,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-10-24 23:30:00+00:00"
+        }
+    },
     "last_daily_report_date": "2026-10-24"
 }
