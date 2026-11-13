@@ -1,6 +1,31 @@
 {
-    "cash": 9746.076202434762,
-    "total_value": 9746.076202434762,
-    "positions": {},
+    "cash": 6746.076202434762,
+    "total_value": 9732.825975619264,
+    "positions": {
+        "TSLA": {
+            "buy_time": "2026-11-13 23:41:34",
+            "buy_price": 392.510009765625,
+            "quantity": 2.54515802182095,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-11-13 15:50:00-05:00"
+        },
+        "MSFT": {
+            "buy_time": "2026-11-13 23:41:35",
+            "buy_price": 525.4000244140625,
+            "quantity": 1.9014083623503948,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-11-13 15:50:00-05:00"
+        },
+        "AMZN": {
+            "buy_time": "2026-11-13 23:41:35",
+            "buy_price": 267.18389892578125,
+            "quantity": 3.7389977615286756,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-11-13 15:50:00-05:00"
+        }
+    },
     "last_daily_report_date": "2026-11-13"
 }
