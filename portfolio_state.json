@@ -7,7 +7,7 @@
             "buy_price": 392.510009765625,
             "quantity": 2.54515802182095,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-11-13 15:50:00-05:00"
         },
         "MSFT": {
@@ -15,7 +15,7 @@
             "buy_price": 525.4000244140625,
             "quantity": 1.9014083623503948,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-11-13 15:50:00-05:00"
         },
         "AMZN": {
@@ -23,7 +23,7 @@
             "buy_price": 267.18389892578125,
             "quantity": 3.7389977615286756,
             "invested_amount": 1000.0,
-            "bars_held": 0,
+            "bars_held": 1,
             "entry_candle_time": "2026-11-13 15:50:00-05:00"
         }
     },
