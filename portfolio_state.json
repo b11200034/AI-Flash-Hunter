@@ -1,6 +1,31 @@
 {
-    "cash": 9679.77014250646,
-    "total_value": 9679.77014250646,
-    "positions": {},
+    "cash": 6679.770142506461,
+    "total_value": 9676.694352626817,
+    "positions": {
+        "NVDA": {
+            "buy_time": "2026-11-25 00:25:38",
+            "buy_price": 155.11000061035156,
+            "quantity": 6.440590523299436,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-11-24 15:50:00-05:00"
+        },
+        "TSLA": {
+            "buy_time": "2026-11-25 00:25:39",
+            "buy_price": 385.69500732421875,
+            "quantity": 2.590129457289634,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-11-24 15:50:00-05:00"
+        },
+        "AMZN": {
+            "buy_time": "2026-11-25 00:25:41",
+            "buy_price": 252.2899932861328,
+            "quantity": 3.959728988802943,
+            "invested_amount": 1000.0,
+            "bars_held": 0,
+            "entry_candle_time": "2026-11-24 15:50:00-05:00"
+        }
+    },
     "last_daily_report_date": "2026-11-24"
 }
